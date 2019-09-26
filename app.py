@@ -30,6 +30,7 @@ def playlists_submit():
     playlist = {
         'title': request.form.get('title'),
         'description': request.form.get('description'),
+        'rating': request.form.get('rating'),
         'videos': request.form.get('videos').split()
     }
     playlists.insert_one(playlist)
